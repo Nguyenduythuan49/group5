@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Nhóm 5 - Đại học Giao thông Vận tải</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    
+    <!-- BANNER -->
+    <header class="bg-gradient-to-r from-blue-800 to-purple-800 shadow-2xl">
+        <div class="container mx-auto px-4 py-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 animate-pulse">
+                HỒ SƠ NHÓM 5
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-200 mb-2">
+                Đại học Giao thông Vận tải
+            </p>
+            <p class="text-lg text-purple-200">
+                Ngành Công nghệ Thông tin - Báo cáo Giữa kỳ
+            </p>
+            <div class="mt-6 h-1 w-32 bg-gradient-to-r from-yellow-400 to-pink-400 mx-auto rounded-full"></div>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="bg-gray-900 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center py-4 space-x-2 md:space-x-4">
+                <button onclick="showMemberCV(0)" class="nav-btn bg-red-600 hover:bg-red-700">
+                    <i class="fas fa-user mr-2"></i>
+                    Nguyễn Duy Thuần
+                </button>
+                <button onclick="showMemberCV(1)" class="nav-btn bg-green-600 hover:bg-green-700">
+                    <i class="fas fa-user-tie mr-2"></i>
+                    Trần Văn Quang
+                </button>
+                <button onclick="showMemberCV(2)" class="nav-btn bg-blue-600 hover:bg-blue-700">
+                    <i class="fas fa-user-graduate mr-2"></i>
+                    Nguyễn Trần Duy Khả
+                </button>
+                <button onclick="showMemberCV(3)" class="nav-btn bg-purple-600 hover:bg-purple-700">
+                    <i class="fas fa-user-ninja mr-2"></i>
+                    Trần Phan Đình Huy
+                </button>
+                <button onclick="showMemberCV(4)" class="nav-btn bg-orange-600 hover:bg-orange-700">
+                    <i class="fas fa-user-astronaut mr-2"></i>
+                    Nguyễn Thanh Vũ
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Welcome Section -->
+        <div id="welcome-section" class="text-center mb-12">
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-8 border border-white/20">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Chào mừng đến với Hồ sơ Nhóm 5
+                </h2>
+                <p class="text-lg text-gray-200 mb-6 max-w-3xl mx-auto">
+                    Chúng tôi là nhóm 5 gồm 5 sinh viên ngành Công nghệ Thông tin tại Đại học Giao thông Vận tải. 
+                     Hãy khám phá nhóm tôi .....
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-blue-500/20 p-4 rounded-lg">
+                        <i class="fas fa-graduation-cap text-3xl text-blue-300 mb-2"></i>
+                        <h3 class="text-white font-semibold">Trường</h3>
+                        <p class="text-gray-300">ĐH Giao thông Vận tải</p>
+                    </div>
+                    <div class="bg-green-500/20 p-4 rounded-lg">
+                        <i class="fas fa-laptop-code text-3xl text-green-300 mb-2"></i>
+                        <h3 class="text-white font-semibold">Ngành học</h3>
+                        <p class="text-gray-300">Công nghệ Thông tin</p>
+                    </div>
+                    <div class="bg-purple-500/20 p-4 rounded-lg">
+                        <i class="fas fa-users text-3xl text-purple-300 mb-2"></i>
+                        <h3 class="text-white font-semibold">Nhóm</h3>
+                        <p class="text-gray-300">5 thành viên</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CV Container -->
+        <div id="cv-container" class="hidden">
+            <iframe id="cv-frame" src="" class="w-full h-screen rounded-2xl shadow-2xl border-4 border-white/20"></iframe>
+        </div>
+
+        <!-- Back Button -->
+        <div id="back-btn-container" class="hidden text-center mt-8">
+            <button onclick="showWelcome()" class="bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg transform hover:scale-105 transition-all duration-300">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Quay lại trang chủ
+            </button>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400 mb-4">
+                © 2025 Nhóm 5 - Đại học Giao thông Vận tải
+            </p>
+            <p class="text-sm text-gray-500">
+                Báo cáo Giữa kỳ 
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
