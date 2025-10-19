@@ -1,918 +1,464 @@
-/* ========== CSS CV TRẦN THỊ BÌNH - THEME XANH LÁ MINIMALIST ========== */
+/* ---------------------------------------------------- */
+/* 1. THIẾT LẬP CHUNG & BIẾN CSS */
+/* ---------------------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root {
+    --primary-color: #ff4081; /* Màu nhấn chính (Hồng neon) */
+    --secondary-color: #9e9e9e; /* Màu phụ (xám nhạt) */
+    --bg-light: #f5f5f5; /* Màu nền sáng nhẹ */
+    --bg-dark: #121212; /* Màu nền tối đen */
+    --text-dark: #111111; /* Màu chữ đen đậm */
+    --text-white: #ffffff; /* Màu chữ trắng */
+    --font-family: 'Inter', sans-serif; /* Font hiện đại */
+}
 
-/* ========== RESET & BASE ========== */
-* {
+/* Khởi tạo lại CSS (Reset) */
+body {
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--text-white);
+    color: var(--text-dark);
     line-height: 1.6;
-    color: #2d3748;
-    background: linear-gradient(135deg, #f0fff4 0%, #dcfce7 50%, #bbf7d0 100%);
-    min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
-/* ========== BANNER - YÊU CẦU 1 ========== */
-.banner {
-    background: linear-gradient(135deg, #16a34a 0%, #15803d 50%, #166534 100%);
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><circle cx="30" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
-    animation: backgroundMove 25s linear infinite;
-}
-
-.banner-container {
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    z-index: 2;
-    width: 100%;
+    padding: 0 20px;
 }
 
-.banner-text {
-    color: white;
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s;
 }
 
-.banner-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.025em;
-    animation: slideInLeft 1s ease-out;
+a:hover {
+    color: #e91e63;
 }
 
-.banner-subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 0.5rem;
-    opacity: 0.95;
-    animation: slideInLeft 1s ease-out 0.2s both;
-}
-
-.banner-university {
-    font-size: 1.1rem;
-    font-weight: 400;
-    opacity: 0.9;
-    animation: slideInLeft 1s ease-out 0.4s both;
-}
-
-.banner-shape {
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50% 25% 50% 25%;
-    animation: float 6s ease-in-out infinite;
-}
-
-/* ========== NAVBAR - YÊU CẦU 1 ========== */
-.navbar {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(22, 163, 74, 0.2);
+/* ---------------------------------------------------- */
+/* 2. THANH ĐIỀU HƯỚNG */
+/* ---------------------------------------------------- */
+header {
+    background-color: var(--text-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 20px rgba(22, 163, 74, 0.1);
+    z-index: 1000;
 }
 
-.nav-list {
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.7em;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+header ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 1rem 0;
     margin: 0;
-    gap: 2rem;
+    padding: 0;
 }
 
-.nav-item {
-    text-decoration: none;
-    color: #16a34a;
+header ul li a {
+    color: var(--text-dark);
+    padding: 10px 15px;
     font-weight: 500;
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    border: 2px solid transparent;
     position: relative;
 }
 
-.nav-item::before {
+header ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hiệu ứng gạch chân */
+header ul li a::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #16a34a, #15803d);
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
-.nav-item:hover::before,
-.nav-item.active::before {
-    opacity: 1;
-}
-
-.nav-item:hover,
-.nav-item.active {
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(22, 163, 74, 0.3);
-}
-
-/* ========== LAYOUT CHÍNH - YÊU CẦU 2 (GRID/FLEX) ========== */
-.main-layout {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    gap: 2rem;
-}
-
-/* ========== PROFILE SECTION ========== */
-.profile-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.profile-card,
-.info-card {
-    background: white;
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 10px 40px rgba(22, 163, 74, 0.08);
-    border: 1px solid rgba(22, 163, 74, 0.1);
-    transition: all 0.3s ease;
-}
-
-.profile-card:hover,
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 60px rgba(22, 163, 74, 0.15);
-}
-
-/* ========== ẢNH CÁ NHÂN - YÊU CẦU 13 ========== */
-.profile-image-wrapper {
-    position: relative;
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 1.5rem;
-}
-
-.profile-image {
+header ul li a:hover::after {
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid white;
-    box-shadow: 0 10px 30px rgba(22, 163, 74, 0.2);
-    animation: zoomIn 1s ease-out 0.5s both;
+    left: 0;
 }
 
-.profile-ring {
+/* ---------------------------------------------------- */
+/* 3. PHẦN CHUNG */
+/* ---------------------------------------------------- */
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    color: var(--text-dark);
+}
+
+.section-title::after {
+    content: '';
     position: absolute;
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
-    border: 2px solid #16a34a;
-    border-radius: 50%;
-    border-top-color: transparent;
-    animation: rotate 3s linear infinite;
-}
-
-.profile-name {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #16a34a;
-    text-align: center;
-    margin-bottom: 0.5rem;
-}
-
-.profile-role {
-    font-size: 1rem;
-    color: #6b7280;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.profile-divider {
-    width: 50px;
-    height: 3px;
-    background: linear-gradient(45deg, #16a34a, #15803d);
-    margin: 0 auto;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
     border-radius: 2px;
 }
 
-/* ========== THÔNG TIN CÁ NHÂN - YÊU CẦU 3 ========== */
-.card-title {
-    font-size: 1.3rem;
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.bg-dark {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+}
+
+.text-white {
+    color: var(--text-white) !important;
+}
+
+.highlight {
+    color: var(--primary-color);
     font-weight: 600;
-    color: #16a34a;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #dcfce7;
 }
 
-.info-grid {
-    display: grid;
-    gap: 1rem;
-}
-
-.info-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #f3f4f6;
-}
-
-.info-row:last-child {
-    border-bottom: none;
-}
-
-.info-label {
-    font-weight: 500;
-    color: #6b7280;
-}
-
-.info-value {
-    font-weight: 400;
-    color: #374151;
-}
-
-/* ========== NGÔN NGỮ - YÊU CẦU 6 ========== */
-.language-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.language-item {
-    width: 100%;
-}
-
-.language-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
-
-.language-header span:first-child {
-    font-weight: 500;
-    color: #374151;
-}
-
-.language-level {
-    font-size: 0.875rem;
-    color: #6b7280;
-}
-
-.language-bar {
-    width: 100%;
-    height: 8px;
-    background: #f3f4f6;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.language-progress {
-    height: 100%;
-    background: linear-gradient(45deg, #16a34a, #15803d);
-    border-radius: 4px;
-    width: 0;
-    transition: width 2s ease-out;
-}
-
-/* ========== SỞ THÍCH - YÊU CẦU 5 ========== */
-.hobbies-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-}
-
-.hobby-tag {
-    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
-    color: #16a34a;
-    padding: 0.6rem 1rem;
-    border-radius: 25px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(22, 163, 74, 0.2);
-}
-
-.hobby-tag:hover {
-    background: #16a34a;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(22, 163, 74, 0.3);
-}
-
-/* ========== CONTENT SECTION ========== */
-.content-section {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.content-card {
-    background: white;
-    border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: 0 10px 40px rgba(22, 163, 74, 0.08);
-    border: 1px solid rgba(22, 163, 74, 0.1);
-    transition: all 0.3s ease;
-}
-
-.content-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 60px rgba(22, 163, 74, 0.15);
-}
-
-.content-title {
-    font-size: 2rem;
+/* Nút bấm */
+.btn {
+    padding: 12px 25px;
+    border-radius: 5px;
     font-weight: 600;
-    color: #16a34a;
-    margin-bottom: 2rem;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #e91e63;
+    border-color: #e91e63;
+    box-shadow: 0 4px 8px rgba(233, 30, 99, 0.4);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* ---------------------------------------------------- */
+/* 4. HERO SECTION */
+/* ---------------------------------------------------- */
+.hero-section {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+}
+
+.hero-content {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 3px solid #dcfce7;
+    gap: 50px;
+    text-align: left;
 }
 
-/* ========== MỤC TIÊU NGHỀ NGHIỆP - YÊU CẦU 4 ========== */
-.career-description {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #4b5563;
-    margin-bottom: 2rem;
-}
-
-.timeline {
-    position: relative;
-    padding-left: 2rem;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #16a34a, #dcfce7);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: -23px;
-    top: 8px;
-    width: 16px;
-    height: 16px;
-    background: #16a34a;
+.avatar {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+    object-fit: cover;
+    border: 6px solid var(--text-white);
+    box-shadow: 0 10px 20px rgba(255, 64, 129, 0.3);
 }
 
-.timeline-content h4 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #16a34a;
-    margin-bottom: 0.5rem;
+.text-content {
+    flex-grow: 1;
 }
 
-.timeline-content p {
-    color: #6b7280;
-    line-height: 1.6;
+.greeting {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
 }
 
-/* ========== KỸ NĂNG - YÊU CẦU 6 ========== */
-.skills-container {
+.text-content h1 {
+    font-size: 3.5em;
+    margin: 0 0 10px;
+    color: var(--text-dark);
+}
+
+.text-content h2 {
+    font-size: 1.8em;
+    margin: 0 0 20px;
+    color: var(--secondary-color);
+}
+
+.text-content p {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+}
+
+/* ---------------------------------------------------- */
+/* 5. PHẦN KỸ NĂNG */
+/* ---------------------------------------------------- */
+.skills-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-}
-
-.skills-category {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #16a34a;
-    margin-bottom: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
     text-align: center;
 }
 
-.skills-column:first-child {
-    border-right: 2px solid #dcfce7;
-    padding-right: 2rem;
-}
-
 .skill-item {
-    margin-bottom: 1.5rem;
+    background-color: var(--text-white);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
 }
 
-.skill-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 64, 129, 0.3);
 }
 
-.skill-header span:first-child {
-    font-weight: 500;
-    color: #374151;
+.skill-item i {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
 }
 
-.skill-header span:last-child {
-    font-size: 0.875rem;
-    color: #16a34a;
-    font-weight: 600;
+.skill-item h3 {
+    margin-top: 0;
+    color: var(--text-dark);
 }
 
-.skill-bar {
-    width: 100%;
-    height: 10px;
-    background: #f3f4f6;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.skill-fill {
-    height: 100%;
-    background: linear-gradient(45deg, #16a34a, #15803d);
-    border-radius: 5px;
-    width: 0;
-    transition: width 2s ease-out;
-}
-
-.tools-grid {
+/* ---------------------------------------------------- */
+/* 6. PHẦN DỰ ÁN */
+/* ---------------------------------------------------- */
+.projects-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
 }
 
-.tool-item {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    padding: 1rem;
-    background: linear-gradient(135deg, #f0fff4, #dcfce7);
-    border-radius: 12px;
-    border: 1px solid rgba(22, 163, 74, 0.2);
-    transition: all 0.3s ease;
-}
-
-.tool-item:hover {
-    background: #16a34a;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(22, 163, 74, 0.3);
-}
-
-.tool-item i {
-    font-size: 1.5rem;
-    color: #16a34a;
-    transition: color 0.3s ease;
-}
-
-.tool-item:hover i {
-    color: white;
-}
-
-/* ========== CHỨNG CHỈ - GIẢI THƯỞNG - YÊU CẦU 7 ========== */
-.achievements-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.achievement-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    background: linear-gradient(135deg, #f0fff4, #dcfce7);
-    border-radius: 15px;
-    border-left: 4px solid #16a34a;
-    transition: all 0.3s ease;
-}
-
-.achievement-item:hover {
-    transform: translateX(10px);
-    box-shadow: 0 10px 30px rgba(22, 163, 74, 0.2);
-}
-
-.achievement-icon {
-    background: #16a34a;
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    flex-shrink: 0;
-}
-
-.achievement-content h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #16a34a;
-    margin-bottom: 0.5rem;
-}
-
-.achievement-content p {
-    color: #6b7280;
-    line-height: 1.6;
-}
-
-/* ========== DỰ ÁN - YÊU CẦU 8 ========== */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-item {
-    background: white;
-    border-radius: 15px;
+.project-card {
+    background-color: var(--text-white);
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(22, 163, 74, 0.1);
-    border: 1px solid rgba(22, 163, 74, 0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
 }
 
-.project-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(22, 163, 74, 0.2);
+.project-card:hover {
+    box-shadow: 0 15px 30px rgba(255, 64, 129, 0.4);
 }
 
-.project-header {
-    position: relative;
-    overflow: hidden;
-}
-
-.project-image {
+.project-img {
     width: 100%;
-    height: 200px;
+    height: 1000px;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    display: block;
 }
 
-.project-item:hover .project-image {
-    transform: scale(1.1);
+.project-info {
+    padding: 20px;
 }
 
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(22, 163, 74, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.project-item:hover .project-overlay {
-    opacity: 1;
-}
-
-.project-link,
-.project-github {
-    width: 50px;
-    height: 50px;
-    background: white;
-    color: #16a34a;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.project-link:hover,
-.project-github:hover {
-    background: #16a34a;
-    color: white;
-    transform: scale(1.1);
-}
-
-.project-content {
-    padding: 1.5rem;
-}
-
-.project-content h4 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #16a34a;
-    margin-bottom: 0.8rem;
-}
-
-.project-content p {
-    color: #6b7280;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+.project-info h3 {
+    color: var(--primary-color);
+    margin-top: 0;
 }
 
 .project-tags span {
-    background: #dcfce7;
-    color: #16a34a;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 500;
+    display: inline-block;
+    background-color: #ffe4ec;
+    color: var(--secondary-color);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 10px;
 }
 
-/* ========== LIÊN HỆ - YÊU CẦU 9 ========== */
-.contact-container {
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------- */
+/* 7. PHẦN SỞ THÍCH */
+/* ---------------------------------------------------- */
+.hobbies-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+}
+
+.hobby-item {
+    max-width: 300px;
+    padding: 20px;
+}
+
+.hobby-item i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.hobby-item h4 {
+    margin: 5px 0 10px;
+}
+
+/* ---------------------------------------------------- */
+/* 8. PHẦN LIÊN HỆ */
+/* ---------------------------------------------------- */
+.contact-info-grid {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 3rem;
-    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.contact-info {
+.contact-detail {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.contact-detail:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact-detail i {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.contact-detail h4 {
+    margin: 0 0 5px;
+    color: var(--text-white);
+}
+
+.contact-detail a {
+    color: var(--text-white);
+    opacity: 0.8;
+}
+
+.contact-detail a:hover {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto 0;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 15px;
 }
 
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1rem;
-    background: linear-gradient(135deg, #f0fff4, #dcfce7);
-    border-radius: 12px;
-    border: 1px solid rgba(22, 163, 74, 0.2);
-    transition: all 0.3s ease;
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: var(--text-white);
 }
 
-.contact-item:hover {
-    background: white;
-    box-shadow: 0 5px 20px rgba(22, 163, 74, 0.2);
-    transform: translateX(5px);
+.contact-form textarea {
+    resize: vertical;
 }
 
-.contact-icon {
-    width: 50px;
-    height: 50px;
-    background: #16a34a;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    flex-shrink: 0;
+/* ---------------------------------------------------- */
+/* 9. FOOTER */
+/* ---------------------------------------------------- */
+footer {
+    background-color: #000;
+    color: #ccc;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
 }
 
-.contact-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-label {
-    font-size: 0.875rem;
-    color: #6b7280;
-    margin-bottom: 0.2rem;
-}
-
-.contact-value {
-    font-weight: 500;
-    color: #16a34a;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-value:hover {
-    color: #15803d;
-}
-
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.social-link {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-}
-
-.social-link:hover {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.social-link.facebook { background: #1877f2; }
-.social-link.instagram { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); }
-.social-link.twitter { background: #1da1f2; }
-.social-link.youtube { background: #ff0000; }
-
-/* ========== ANIMATIONS - YÊU CẦU 12 ========== */
-@keyframes backgroundMove {
-    0% { transform: translateX(-100px) translateY(-100px); }
-    100% { transform: translateX(100px) translateY(100px); }
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translate3d(-100%, 0, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-
-@keyframes zoomIn {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 40px, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-.fade-in-up {
-    animation: fadeInUp 0.6s ease-out both;
-}
-
-/* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 1024px) {
-    .main-layout {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .skills-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .skills-column:first-child {
-        border-right: none;
-        border-bottom: 2px solid #dcfce7;
-        padding-right: 0;
-        padding-bottom: 2rem;
-    }
-    
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .social-links {
-        flex-direction: row;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .banner-title {
-        font-size: 2.5rem;
-    }
-    
-    .banner-subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .nav-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .tools-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .profile-card,
-    .info-card,
-    .content-card {
-        padding: 1.5rem;
-    }
-    
-    .main-layout {
-        padding: 0 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .banner-container {
+/* ---------------------------------------------------- */
+/* 10. MEDIA QUERIES */
+/* ---------------------------------------------------- */
+@media (max-width: 992px) {
+    .hero-content {
         flex-direction: column;
         text-align: center;
-        gap: 2rem;
     }
-    
-    .banner-shape {
-        width: 150px;
-        height: 150px;
+    .text-content {
+        order: 2;
     }
-    
-    .profile-image-wrapper {
-        width: 150px;
-        height: 150px;
+    .avatar {
+        order: 1;
+        margin-bottom: 30px;
     }
-    
-    .timeline {
-        padding-left: 1.5rem;
+    .cta-buttons {
+        justify-content: center;
     }
-    
-    .timeline-dot {
-        left: -18px;
+    .skills-grid, .projects-container, .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .section-title {
+        font-size: 2em;
+    }
+    header ul {
+        display: none;
     }
 }
