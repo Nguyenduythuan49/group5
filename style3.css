@@ -1,4 +1,4 @@
-/* ========== CSS CV LÊ VĂN CƯỜNG - PROFESSIONAL THEME XANH DƯƠNG ========== */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Source+Code+Pro:wght@400;500;600&display=swap');
 
@@ -12,14 +12,14 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #1e293b;
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+    color: #833AB4;
+    background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(78, 9, 121, 1) 19%, rgba(200, 0, 255, 1) 85%);
     min-height: 100vh;
 }
 
 /* ========== HEADER BANNER - YÊU CẦU 1 ========== */
 .header-banner {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+    background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(78, 9, 121, 1) 19%, rgba(200, 0, 255, 1) 85%);
     min-height: 500px;
     position: relative;
     overflow: hidden;
@@ -67,7 +67,7 @@ body {
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    color: #93c5fd;
+    color: #d735fc;
     animation: slideInLeft 1s ease-out 0.2s both;
 }
 
@@ -94,10 +94,10 @@ body {
     transition: all 0.3s ease;
 }
 
-.stat-item:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-5px);
-}
+    .stat-item:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
 
 .stat-number {
     display: block;
@@ -161,7 +161,7 @@ body {
 
 /* ========== PROFESSIONAL NAVBAR - YÊU CẦU 1 ========== */
 .professional-navbar {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(109, 26, 150, 0.75) 47%;
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(37, 99, 235, 0.1);
     position: sticky;
@@ -190,7 +190,7 @@ body {
     padding: 1rem 2rem;
     border-radius: 50px;
     text-decoration: none;
-    color: #2563eb;
+    color: white;
     font-weight: 500;
     transition: all 0.3s ease;
     border: 2px solid transparent;
@@ -198,35 +198,35 @@ body {
     background: transparent;
 }
 
-.nav-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-}
+    .nav-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg,rgba(149, 54, 227, 1) 0%, rgba(69, 0, 112, 1) 100%);
+        border-radius: inherit;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: -1;
+    }
 
-.nav-button:hover::before,
-.nav-button.active::before {
-    opacity: 1;
-}
+    .nav-button:hover::before,
+    .nav-button.active::before {
+        opacity: 1;
+    }
 
-.nav-button:hover,
-.nav-button.active {
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
-}
+    .nav-button:hover,
+    .nav-button.active {
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(149, 54, 227, 1);
+    }
 
-.nav-button i {
-    font-size: 1.1rem;
-}
+    .nav-button i {
+        font-size: 1.1rem;
+    }
 
 /* ========== MAIN LAYOUT - YÊU CẦU 2 (GRID/FLEX) ========== */
 .main-content {
@@ -250,7 +250,7 @@ body {
 
 .info-section,
 .content-section {
-    background: white;
+    background: #E6E6FA;
     border-radius: 20px;
     padding: 2rem;
     box-shadow: 0 10px 40px rgba(37, 99, 235, 0.08);
@@ -258,11 +258,11 @@ body {
     transition: all 0.3s ease;
 }
 
-.info-section:hover,
-.content-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 60px rgba(37, 99, 235, 0.15);
-}
+    .info-section:hover,
+    .content-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 60px rgba(37, 99, 235, 0.15);
+    }
 
 /* ========== SECTION HEADERS ========== */
 .section-header {
@@ -272,7 +272,7 @@ body {
 .section-title {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #2563eb;
+    color: #9534cf;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -280,9 +280,9 @@ body {
     border-bottom: 3px solid #e0e7ff;
 }
 
-.section-title i {
-    font-size: 1.3rem;
-}
+    .section-title i {
+        font-size: 1.3rem;
+    }
 
 /* ========== THÔNG TIN CÁ NHÂN - YÊU CẦU 3 ========== */
 .info-content {
@@ -298,19 +298,19 @@ body {
     padding: 1rem;
     background: linear-gradient(135deg, #f8fafc, #f1f5f9);
     border-radius: 12px;
-    border-left: 4px solid #2563eb;
+    border-left: 4px solid #9534cf;
     transition: all 0.3s ease;
 }
 
-.info-item:hover {
-    background: linear-gradient(135deg, #eff6ff, #dbeafe);
-    transform: translateX(10px);
-}
+    .info-item:hover {
+        background: linear-gradient(135deg, #eff6ff, #f3dbfe);
+        transform: translateX(10px);
+    }
 
 .info-icon {
     width: 40px;
     height: 40px;
-    background: #2563eb;
+    background: #9534cf;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -335,7 +335,7 @@ body {
     color: #1e293b;
 }
 
-/* ========== NGÔN NGỮ LẬP TRÌNH - YÊU CẦU 6 ========== */
+/* ========== NGÔN NGỮ - YÊU CẦU 6 ========== */
 .languages-content {
     display: flex;
     flex-direction: column;
@@ -358,29 +358,29 @@ body {
 
 .language-name {
     font-weight: 600;
-    color: #1e293b;
+    color: #9534cf;
     font-family: 'Source Code Pro', monospace;
 }
 
 .language-level {
     font-size: 0.875rem;
-    color: #2563eb;
+    color: #9534cf;
     font-weight: 500;
 }
 
 .language-progress {
     width: 100%;
     height: 8px;
-    background: #e2e8f0;
+    background: Grey;
     border-radius: 4px;
     overflow: hidden;
 }
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(45deg, #2563eb, #1d4ed8);
+    background: linear-gradient(45deg, #9534cf, #d483f7);
     border-radius: 4px;
-    width: 0;
+    width: 100%;
     transition: width 2s ease-out;
 }
 
@@ -396,23 +396,23 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    background: linear-gradient(135deg, #eff6ff, #f3dbfe);
     border-radius: 12px;
     border: 1px solid #bfdbfe;
     transition: all 0.3s ease;
 }
 
-.hobby-card:hover {
-    background: #2563eb;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
-}
+    .hobby-card:hover {
+        background: #d780ff 40%;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    }
 
 .hobby-icon {
     width: 50px;
     height: 50px;
-    background: #2563eb;
+    background: #9534cf;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -424,13 +424,13 @@ body {
 
 .hobby-card:hover .hobby-icon {
     background: white;
-    color: #2563eb;
+    color: #9534cf;
 }
 
 .hobby-text h4 {
     font-weight: 600;
     margin-bottom: 0.3rem;
-    color: #2563eb;
+    color: #9534cf;
     transition: color 0.3s ease;
 }
 
@@ -458,7 +458,7 @@ body {
 .content-title {
     font-size: 2rem;
     font-weight: 700;
-    color: #2563eb;
+    color: #9534cf;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -485,15 +485,15 @@ body {
     padding-left: 2rem;
 }
 
-.career-roadmap::before {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: linear-gradient(to bottom, #2563eb, #bfdbfe);
-}
+    .career-roadmap::before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(to bottom, #7c0bb0, #f2f7f7);
+    }
 
 .roadmap-item {
     position: relative;
@@ -504,7 +504,7 @@ body {
 }
 
 .roadmap-year {
-    background: #2563eb;
+    background: #9534cf;
     color: white;
     width: 80px;
     height: 80px;
@@ -517,7 +517,7 @@ body {
     flex-shrink: 0;
     position: relative;
     z-index: 2;
-    box-shadow: 0 5px 20px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 5px 20px rgba(149, 54, 227, 1);
 }
 
 .roadmap-content {
@@ -525,34 +525,34 @@ body {
     background: linear-gradient(135deg, #f8fafc, #f1f5f9);
     padding: 1.5rem;
     border-radius: 15px;
-    border-left: 4px solid #2563eb;
+    border-left: 4px solid #9534cf;
 }
 
-.roadmap-content h4 {
-    color: #2563eb;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
+    .roadmap-content h4 {
+        color: #9534cf;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
 
-.roadmap-content ul {
-    list-style: none;
-    padding-left: 0;
-}
+    .roadmap-content ul {
+        list-style: none;
+        padding-left: 0;
+    }
 
-.roadmap-content li {
-    padding: 0.5rem 0;
-    position: relative;
-    padding-left: 1.5rem;
-    color: #475569;
-}
+    .roadmap-content li {
+        padding: 0.5rem 0;
+        position: relative;
+        padding-left: 1.5rem;
+        color: #475569;
+    }
 
-.roadmap-content li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #2563eb;
-    font-weight: bold;
-}
+        .roadmap-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #9534cf;
+            font-weight: bold;
+        }
 
 /* ========== KỸ NĂNG - YÊU CẦU 6 ========== */
 .skills-content {
@@ -577,7 +577,7 @@ body {
 .category-title {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #2563eb;
+    color: #9534cf;
     margin-bottom: 1.5rem;
     text-align: center;
     padding-bottom: 1rem;
@@ -612,23 +612,23 @@ body {
 
 .skill-percent {
     font-size: 0.875rem;
-    color: #2563eb;
+    color: #9534cf;
     font-weight: 600;
 }
 
 .skill-bar {
     width: 100%;
     height: 10px;
-    background: #e2e8f0;
+    background: Grey;
     border-radius: 5px;
     overflow: hidden;
 }
 
 .skill-progress {
     height: 100%;
-    background: linear-gradient(45deg, #2563eb, #1d4ed8);
+    background: linear-gradient(45deg, #9534cf, #d483f7);
     border-radius: 5px;
-    width: 0;
+    width: 100%;
     transition: width 2s ease-out;
 }
 
@@ -656,28 +656,28 @@ body {
     cursor: pointer;
 }
 
-.tool-card:hover {
-    background: #2563eb;
-    color: white;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
-}
+    .tool-card:hover {
+        background: #9534cf;
+        color: white;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+    }
 
-.tool-card i {
-    font-size: 2rem;
-    color: #2563eb;
-    margin-bottom: 0.8rem;
-    transition: color 0.3s ease;
-}
+    .tool-card i {
+        font-size: 2rem;
+        color: #9534cf;
+        margin-bottom: 0.8rem;
+        transition: color 0.3s ease;
+    }
 
-.tool-card:hover i {
-    color: white;
-}
+    .tool-card:hover i {
+        color: white;
+    }
 
-.tool-card span {
-    font-weight: 500;
-    font-size: 0.9rem;
-}
+    .tool-card span {
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
 
 /* ========== CHỨNG CHỈ - GIẢI THƯỞNG - YÊU CẦU 7 ========== */
 .achievements-content {
@@ -701,16 +701,16 @@ body {
     align-items: flex-start;
 }
 
-.achievement-card:hover {
-    background: white;
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
-}
+    .achievement-card:hover {
+        background: white;
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(149, 54, 227, 1);
+    }
 
 .achievement-icon {
     width: 60px;
     height: 60px;
-    background: #2563eb;
+    background: #9534cf;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -723,7 +723,7 @@ body {
 .achievement-info h4 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #2563eb;
+    color: #9534cf;
     margin-bottom: 0.5rem;
 }
 
@@ -734,7 +734,7 @@ body {
 
 .achievement-date {
     font-size: 0.875rem;
-    color: #2563eb;
+    color: #9534cf;
     font-weight: 500;
     background: #eff6ff;
     padding: 0.3rem 0.8rem;
@@ -757,10 +757,10 @@ body {
     box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 60px rgba(37, 99, 235, 0.2);
-}
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 60px rgba(149, 54, 227, 1);
+    }
 
 .project-header {
     position: relative;
@@ -771,12 +771,12 @@ body {
     position: relative;
 }
 
-.project-image img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
+    .project-image img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
 
 .project-card:hover .project-image img {
     transform: scale(1.05);
@@ -788,7 +788,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(37, 99, 235, 0.9);
+    background: rgba(149, 54, 227, 1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -810,7 +810,7 @@ body {
     width: 60px;
     height: 60px;
     background: white;
-    color: #2563eb;
+    color: #9534cf;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -820,12 +820,12 @@ body {
     transition: all 0.3s ease;
 }
 
-.project-link:hover,
-.project-github:hover {
-    background: #2563eb;
-    color: white;
-    transform: scale(1.1);
-}
+    .project-link:hover,
+    .project-github:hover {
+        background: #9534cf;
+        color: white;
+        transform: scale(1.1);
+    }
 
 .project-badge {
     position: absolute;
@@ -847,7 +847,7 @@ body {
 .project-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #2563eb;
+    color: #9534cf;
     margin-bottom: 1rem;
 }
 
@@ -866,7 +866,7 @@ body {
 
 .tech-tag {
     background: #eff6ff;
-    color: #2563eb;
+    color: #9534cf;
     padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.875rem;
@@ -889,9 +889,9 @@ body {
     font-size: 0.875rem;
 }
 
-.stat i {
-    color: #2563eb;
-}
+    .stat i {
+        color: #9534cf;
+    }
 
 /* ========== LIÊN HỆ - YÊU CẦU 9 ========== */
 .contact-content {
@@ -915,16 +915,16 @@ body {
     transition: all 0.3s ease;
 }
 
-.contact-card:hover {
-    background: white;
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
-}
+    .contact-card:hover {
+        background: white;
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(149, 54, 227, 1);
+    }
 
 .contact-icon {
     width: 60px;
     height: 60px;
-    background: #2563eb;
+    background: #9534cf;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -936,13 +936,13 @@ body {
 }
 
 .contact-card:hover .contact-icon {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    background: linear-gradient(135deg, #9534cf, #1d4ed8);
     transform: scale(1.1);
 }
 
 .contact-info h4 {
     font-weight: 600;
-    color: #2563eb;
+    color: #9534cf;
     margin-bottom: 0.5rem;
 }
 
@@ -952,34 +952,34 @@ body {
     transition: color 0.3s ease;
 }
 
-.contact-info a:hover {
-    color: #2563eb;
-}
+    .contact-info a:hover {
+        color: #9534cf;
+    }
 
 .contact-cta {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    background: linear-gradient(135deg, #9534cf, #1d4ed8);
     color: white;
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
 }
 
-.contact-cta h4 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
+    .contact-cta h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
 
-.contact-cta p {
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
+    .contact-cta p {
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
 
 .cta-button {
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
     background: white;
-    color: #2563eb;
+    color: #9534cf;
     padding: 1rem 2rem;
     border-radius: 50px;
     text-decoration: none;
@@ -987,16 +987,21 @@ body {
     transition: all 0.3s ease;
 }
 
-.cta-button:hover {
-    background: #f8fafc;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
+    .cta-button:hover {
+        background: #f8fafc;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(149, 54, 227, 1);
+    }
 
 /* ========== ANIMATIONS - YÊU CẦU 12 ========== */
 @keyframes gridMove {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(10px, 10px); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(10px, 10px);
+    }
 }
 
 @keyframes slideInLeft {
@@ -1004,6 +1009,7 @@ body {
         opacity: 0;
         transform: translate3d(-100%, 0, 0);
     }
+
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
@@ -1015,6 +1021,7 @@ body {
         opacity: 0;
         transform: translate3d(0, 100%, 0);
     }
+
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
@@ -1026,6 +1033,7 @@ body {
         opacity: 0;
         transform: scale(0.5);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -1033,13 +1041,23 @@ body {
 }
 
 @keyframes rotateClockwise {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes rotateCounterClockwise {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(-360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
 }
 
 @keyframes fadeInUp {
@@ -1047,6 +1065,7 @@ body {
         opacity: 0;
         transform: translate3d(0, 40px, 0);
     }
+
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
@@ -1063,30 +1082,30 @@ body {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .banner-content {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
     }
-    
+
     .banner-stats {
         justify-content: center;
     }
-    
+
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .tools-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .achievement-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1096,39 +1115,39 @@ body {
     .main-title {
         font-size: 2.5rem;
     }
-    
+
     .sub-title {
         font-size: 1.5rem;
     }
-    
+
     .nav-menu {
         flex-wrap: wrap;
         gap: 1rem;
     }
-    
+
     .nav-button {
         padding: 0.8rem 1.5rem;
     }
-    
+
     .banner-stats {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .tools-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .roadmap-item {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    
+
     .career-roadmap::before {
         display: none;
     }
@@ -1138,21 +1157,21 @@ body {
     .main-content {
         padding: 0 0.5rem;
     }
-    
+
     .info-section,
     .content-section {
         padding: 1.5rem;
     }
-    
+
     .profile-wrapper {
         width: 200px;
         height: 200px;
     }
-    
+
     .banner-content {
         padding: 0 1rem;
     }
-    
+
     .nav-button span {
         display: none;
     }

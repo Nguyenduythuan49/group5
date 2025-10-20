@@ -14,20 +14,20 @@
         <div class="banner-content">
             <div class="banner-left">
                 <h1 class="main-title">Nguyễn Trần Duy Khả</h1>
-                <h2 class="sub-title">Backend Developer</h2>
+                <h2 class="sub-title">Full-stack Developer</h2>
                 <p class="university">Đại học Giao thông Vận tải - Công nghệ Thông tin</p>
                 <div class="banner-stats">
                     <div class="stat-item">
                         <span class="stat-number">3+</span>
-                        <span class="stat-label">Năm kinh nghiệm</span>
+                        <span class="stat-label">Năm học tập</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">15+</span>
+                        <span class="stat-number">10+</span>
                         <span class="stat-label">Dự án hoàn thành</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Công nghệ</span>
+                        <span class="stat-number">7+</span>
+                        <span class="stat-label">Ngôn ngữ lập trình</span>
                     </div>
                 </div>
             </div>
@@ -74,13 +74,13 @@
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
-        
+
         <!-- PROFESSIONAL LAYOUT -->
         <div class="professional-layout">
-            
+
             <!-- LEFT COLUMN -->
             <aside class="left-column">
-                
+
                 <!-- THÔNG TIN CÁ NHÂN -->
                 <section id="about" class="info-section">
                     <div class="section-header">
@@ -96,7 +96,7 @@
                             </div>
                             <div class="info-details">
                                 <span class="info-label">Ngày sinh</span>
-                                <span class="info-value">10/11/2004</span>
+                                <span class="info-value">04/11/2005</span>
                             </div>
                         </div>
                         <div class="info-item">
@@ -114,16 +114,16 @@
                             </div>
                             <div class="info-details">
                                 <span class="info-label">Địa chỉ</span>
-                                <span class="info-value">Đà Nẵng, Việt Nam</span>
+                                <span class="info-value">Hồ Chí Minh, Việt Nam</span>
                             </div>
                         </div>
                         <div class="info-item">
                             <div class="info-icon">
-                                <i class="fas fa-student"></i>
+                                <i class="fas fa-address-card"></i>
                             </div>
                             <div class="info-details">
                                 <span class="info-label">MSSV</span>
-                                <span class="info-value">20h1120096</span>
+                                <span class="info-value">087205009742</span>
                             </div>
                         </div>
                     </div>
@@ -134,47 +134,51 @@
                     <div class="section-header">
                         <h3 class="section-title">
                             <i class="fas fa-language"></i>
-                            Ngôn ngữ lập trình
+                            Ngôn ngữ
                         </h3>
                     </div>
                     <div class="languages-content">
                         <div class="language-item">
                             <div class="language-info">
-                                <span class="language-name">Java</span>
-                                <span class="language-level">Expert</span>
-                            </div>
-                            <div class="language-progress">
-                                <div class="progress-fill" data-percent="95"></div>
-                            </div>
-                        </div>
-                        <div class="language-item">
-                            <div class="language-info">
-                                <span class="language-name">Python</span>
+                                <span class="language-name">Vietnamese</span>
                                 <span class="language-level">Advanced</span>
                             </div>
                             <div class="language-progress">
-                                <div class="progress-fill" data-percent="85"></div>
+                                <div class="progress-fill" data-percent="100"></div>
                             </div>
                         </div>
                         <div class="language-item">
                             <div class="language-info">
-                                <span class="language-name">JavaScript</span>
-                                <span class="language-level">Intermediate</span>
+                                <span class="language-name">English</span>
+                                <span class="language-level">Pre Advaced</span>
                             </div>
                             <div class="language-progress">
-                                <div class="progress-fill" data-percent="70"></div>
+                                <div class="progress-fill" data-percent="80"></div>
                             </div>
                         </div>
                         <div class="language-item">
                             <div class="language-info">
-                                <span class="language-name">C++</span>
+                                <span class="language-name">Japanese</span>
                                 <span class="language-level">Intermediate</span>
                             </div>
                             <div class="language-progress">
-                                <div class="progress-fill" data-percent="65"></div>
+                                <div class="progress-fill" data-percent="50"></div>
                             </div>
                         </div>
                     </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const progressBars = document.querySelectorAll('.progress-fill');
+
+                            progressBars.forEach(function (bar) {
+                                const percent = bar.getAttribute('data-percent');
+
+                                setTimeout(() => {
+                                    bar.style.width = percent + '%';
+                                }, 100);
+                            });
+                        });
+                    </script>
                 </section>
 
                 <!-- SỞ THÍCH -->
@@ -188,11 +192,11 @@
                     <div class="hobbies-content">
                         <div class="hobby-card">
                             <div class="hobby-icon">
-                                <i class="fas fa-chess"></i>
+                                <i class="fas fa-file-code"></i>
                             </div>
                             <div class="hobby-text">
-                                <h4>Cờ vua</h4>
-                                <p>Chiến thuật & Logic</p>
+                                <h4>Building personal projects</h4>
+                                <p>Tạo các dự án đơn giản, tools</p>
                             </div>
                         </div>
                         <div class="hobby-card">
@@ -201,7 +205,7 @@
                             </div>
                             <div class="hobby-text">
                                 <h4>Coding</h4>
-                                <p>Algorithms & Data Structures</p>
+                                <p>Algorithms & Data Structures, Leetcode</p>
                             </div>
                         </div>
                         <div class="hobby-card">
@@ -210,26 +214,26 @@
                             </div>
                             <div class="hobby-text">
                                 <h4>Đọc sách</h4>
-                                <p>Technology & Science</p>
+                                <p>Light novel</p>
                             </div>
                         </div>
                         <div class="hobby-card">
                             <div class="hobby-icon">
-                                <i class="fas fa-futbol"></i>
+                                <i class="fas fa-user-secret"></i>
                             </div>
                             <div class="hobby-text">
-                                <h4>Bóng đá</h4>
-                                <p>Teamwork & Strategy</p>
+                                <h4>Coding competitions</h4>
+                                <p>ICPC, Hackathons</p>
                             </div>
                         </div>
                     </div>
                 </section>
-                
+
             </aside>
 
             <!-- RIGHT COLUMN -->
             <main class="right-column">
-                
+
                 <!-- MỤC TIÊU NGHỀ NGHIỆP -->
                 <section id="career" class="content-section">
                     <div class="section-header">
@@ -240,34 +244,34 @@
                     </div>
                     <div class="career-content">
                         <div class="career-summary">
-                            <p>Trở thành một Backend Developer chuyên nghiệp với chuyên môn sâu về Java và các công nghệ microservices. Mong muốn phát triển các hệ thống backend có tính mở rộng cao, hiệu suất tốt và bảo mật mạnh mẽ cho các ứng dụng enterprise.</p>
+                            <p>Trở thành một Fullstack Developer chuyên nghiệp với chuyên môn sâu về công nghệ. Mong muốn phát triển các hệ thống có tính mở rộng cao, hiệu suất tốt và bảo mật mạnh mẽ cho các ứng dụng enterprise.</p>
                         </div>
-                        
+
                         <div class="career-roadmap">
                             <div class="roadmap-item">
-                                <div class="roadmap-year">2024</div>
+                                <div class="roadmap-year">2026</div>
                                 <div class="roadmap-content">
-                                    <h4>Junior Backend Developer</h4>
+                                    <h4>Intern Developer</h4>
                                     <ul>
-                                        <li>Hoàn thành Spring Boot certification</li>
+                                        <li>Hoàn thành chương trình đại học</li>
                                         <li>Thực tập tại công ty công nghệ</li>
-                                        <li>Xây dựng 3-5 dự án backend</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="roadmap-item">
-                                <div class="roadmap-year">2025</div>
-                                <div class="roadmap-content">
-                                    <h4>Backend Developer</h4>
-                                    <ul>
-                                        <li>Làm việc full-time</li>
-                                        <li>Học Microservices & Docker</li>
-                                        <li>Tham gia dự án lớn</li>
+                                        <li>Xây dựng 3-5 dự án cá nhân</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="roadmap-item">
                                 <div class="roadmap-year">2027</div>
+                                <div class="roadmap-content">
+                                    <h4>Junior Developer</h4>
+                                    <ul>
+                                        <li>Làm việc full-time</li>
+                                        <li>Nắm vững ngoại ngữ</li>
+                                        <li>Tham gia dự án lớn</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="roadmap-item">
+                                <div class="roadmap-year">2029</div>
                                 <div class="roadmap-content">
                                     <h4>Senior Backend Developer</h4>
                                     <ul>
@@ -292,62 +296,62 @@
                     <div class="skills-content">
                         <div class="skills-grid">
                             <div class="skill-category">
-                                <h4 class="category-title">Backend Frameworks</h4>
+                                <h4 class="category-title">Front-End</h4>
                                 <div class="skill-list">
                                     <div class="skill-item">
                                         <div class="skill-header">
-                                            <span class="skill-name">Spring Boot</span>
-                                            <span class="skill-percent">90%</span>
+                                            <span class="skill-name">React.js / React Native</span>
+                                            <span class="skill-percent">50%</span>
                                         </div>
                                         <div class="skill-bar">
-                                            <div class="skill-progress" data-width="90"></div>
+                                            <div class="skill-progress" data-width="50"></div>
                                         </div>
                                     </div>
                                     <div class="skill-item">
                                         <div class="skill-header">
-                                            <span class="skill-name">Django</span>
-                                            <span class="skill-percent">80%</span>
+                                            <span class="skill-name">Flutter</span>
+                                            <span class="skill-percent">30%</span>
                                         </div>
                                         <div class="skill-bar">
-                                            <div class="skill-progress" data-width="80"></div>
+                                            <div class="skill-progress" data-width="30"></div>
                                         </div>
                                     </div>
                                     <div class="skill-item">
                                         <div class="skill-header">
-                                            <span class="skill-name">Node.js</span>
-                                            <span class="skill-percent">65%</span>
+                                            <span class="skill-name">Swift</span>
+                                            <span class="skill-percent">30%</span>
                                         </div>
                                         <div class="skill-bar">
-                                            <div class="skill-progress" data-width="65"></div>
+                                            <div class="skill-progress" data-width="35"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="skill-category">
-                                <h4 class="category-title">Databases</h4>
+                                <h4 class="category-title">Back-End</h4>
                                 <div class="skill-list">
                                     <div class="skill-item">
                                         <div class="skill-header">
-                                            <span class="skill-name">PostgreSQL</span>
-                                            <span class="skill-percent">85%</span>
+                                            <span class="skill-name">Node.js</span>
+                                            <span class="skill-percent">60%</span>
                                         </div>
                                         <div class="skill-bar">
-                                            <div class="skill-progress" data-width="85"></div>
+                                            <div class="skill-progress" data-width="60"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-header">
+                                            <span class="skill-name">Firebase</span>
+                                            <span class="skill-percent">40%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-width="40"></div>
                                         </div>
                                     </div>
                                     <div class="skill-item">
                                         <div class="skill-header">
                                             <span class="skill-name">MongoDB</span>
-                                            <span class="skill-percent">75%</span>
-                                        </div>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" data-width="75"></div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item">
-                                        <div class="skill-header">
-                                            <span class="skill-name">Redis</span>
                                             <span class="skill-percent">70%</span>
                                         </div>
                                         <div class="skill-bar">
@@ -357,7 +361,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="tools-section">
                             <h4 class="category-title">Tools & Technologies</h4>
                             <div class="tools-grid">
@@ -402,15 +406,24 @@
                         <div class="achievement-grid">
                             <div class="achievement-card">
                                 <div class="achievement-icon">
-                                    <i class="fab fa-java"></i>
+                                    <i class="fas fa-award"></i>
                                 </div>
                                 <div class="achievement-info">
-                                    <h4>chưa có chứng chỉ</h4>
-
-                            
+                                    <h4>JLPT N3</h4>
                                 </div>
                             </div>
-                </section>
+                            <div class="achievement-card">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <div class="achievement-info">
+                                    <h4>IELTS C1</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+</section>
 
                 <!-- DỰ ÁN -->
                 <section id="projects" class="content-section">
@@ -424,7 +437,7 @@
                         <div class="project-card">
                             <div class="project-header">
                                 <div class="project-image">
-                                    <img src="https://via.placeholder.com/400x200/2563EB/FFFFFF?text=E-Learning+Platform" alt="E-Learning Platform">
+                                    <!--<img src="" alt="E-Learning Platform">-->
                                     <div class="project-overlay">
                                         <div class="project-links">
                                             <a href="#" class="project-link">
@@ -439,13 +452,13 @@
                                 <div class="project-badge">Featured</div>
                             </div>
                             <div class="project-content">
-                                <h4 class="project-title">E-Learning Platform</h4>
-                                <p class="project-description">Hệ thống học tập trực tuyến với microservices architecture, hỗ trợ video streaming, quiz system và progress tracking.</p>
+                                <h4 class="project-title">Booking Platform</h4>
+                                <p class="project-description">Hệ thống cho phép người dùng đặt lịch hẹn với các dịch vụ (spa, bác sĩ), tích hợp cổng thanh toán, và gửi thông báo (push notification) nhắc lịch.</p>
                                 <div class="project-tech">
-                                    <span class="tech-tag">Spring Boot</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <span class="tech-tag">Redis</span>
-                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">React Native</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Stripe API</span>
                                 </div>
                                 <div class="project-stats">
                                     <div class="stat">
@@ -459,11 +472,11 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="project-card">
                             <div class="project-header">
                                 <div class="project-image">
-                                    <img src="https://via.placeholder.com/400x200/2563EB/FFFFFF?text=Task+Management+API" alt="Task Management API">
+                                    <!--<img src="" alt="Task Management API">-->
                                     <div class="project-overlay">
                                         <div class="project-links">
                                             <a href="#" class="project-link">
@@ -477,12 +490,12 @@
                                 </div>
                             </div>
                             <div class="project-content">
-                                <h4 class="project-title">Task Management REST API</h4>
-                                <p class="project-description">RESTful API cho quản lý công việc với authentication, authorization, real-time notifications và advanced filtering.</p>
+                                <h4 class="project-title">Food Delivery App</h4>
+                                <p class="project-description">Nền tảng kết nối nhà hàng, tài xế và người dùng, hỗ trợ theo dõi đơn hàng thời gian thực (real-time tracking) trên bản đồ và hệ thống đánh giá.</p>
                                 <div class="project-tech">
-                                    <span class="tech-tag">Java</span>
-                                    <span class="tech-tag">Spring Security</span>
-                                    <span class="tech-tag">JWT</span>
+                                    <span class="tech-tag">Flutter</span>
+                                    <span class="tech-tag">Google Maps API</span>
+                                    <span class="tech-tag">Socket.IO</span>
                                     <span class="tech-tag">MongoDB</span>
                                 </div>
                                 <div class="project-stats">
@@ -497,11 +510,11 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="project-card">
                             <div class="project-header">
                                 <div class="project-image">
-                                    <img src="https://via.placeholder.com/400x200/2563EB/FFFFFF?text=Chat+Application" alt="Real-time Chat">
+                                    <!--<img src="" alt="Real-time Chat">-->
                                     <div class="project-overlay">
                                         <div class="project-links">
                                             <a href="#" class="project-link">
@@ -554,10 +567,10 @@
                                 </div>
                                 <div class="contact-info">
                                     <h4>Email</h4>
-                                    <a href="mailto:duykha@gmail.com">duykha@gmail.com</a>
+                                    <a href="mailto:nguyentranduykha@gmail.com">nguyentranduykha@gmail.com</a>
                                 </div>
                             </div>
-                            
+
                             <div class="contact-card">
                                 <div class="contact-icon">
                                     <i class="fas fa-phone"></i>
@@ -567,18 +580,18 @@
                                     <a href="tel:0369852147">0352788704</a>
                                 </div>
                             </div>
-                            
+
                             <div class="contact-card">
                                 <div class="contact-icon">
                                     <i class="fab fa-github"></i>
                                 </div>
                                 <div class="contact-info">
                                     <h4>GitHub</h4>
-                                    <a href="https://github.com/leduykha" target="_blank">github.com/leduykha</a>
+                                    <a href="https://github.com/YukiSahra" target="_blank">github.com/YukiSahra</a>
                                 </div>
                             </div>
-                            
-                            
+
+
                             <div class="contact-card">
                                 <div class="contact-icon">
                                     <i class="fab fa-facebook"></i>
@@ -588,26 +601,29 @@
                                     <a href="https://www.facebook.com/Sillvyyy?rdid=UqcBzp5EsG7SPAXl#" target="_blank">facebook.com/Sillvyyy</a>
                                 </div>
                             </div>
-                            
+
                             <div class="contact-card">
                                 <div class="contact-icon">
                                     <i class="fab fa-instagram"></i>
                                 </div>
-                                <div class="contact-info"></div>
+                                <div class="contact-info">
+                                    <h4>Instagram</h4>
+                                    <a href="https://www.instagram.com/sillvy.yy" target="_blank">instagram.com/Sillvy.yy</a>
+                                </div>
                             </div>
                         </div>
-                        
+
                         <div class="contact-cta">
                             <h4>Sẵn sàng cho cơ hội mới!</h4>
-                            <p>Tôi luôn mở lòng với các cơ hội thực tập và làm việc trong lĩnh vực Backend Development. Hãy liên hệ để trao đổi!</p>
-                            <a href="mailto:levancuong@gmail.com" class="cta-button">
+                            <p>Tôi luôn mở lòng với các cơ hội thực tập và làm việc trong lĩnh vực Fullstack Development. Hãy liên hệ để trao đổi!</p>
+                            <a href="mailto:nguyentranduykha2005@gmail.com" class="cta-button">
                                 <i class="fas fa-paper-plane"></i>
                                 Gửi email ngay
                             </a>
                         </div>
                     </div>
                 </section>
-                
+
             </main>
         </div>
     </main>
